@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    TBC Group 2 - Viewing {{ product.name }}
+{% endblock %}
+
+{% block content %}
+    <img src="/static/{{ product.img }}" width="75%">
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="row">სახელი</th>
+            <td>{{ product.name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">ფასი</th>
+            <td>{{ product.price }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

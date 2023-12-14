@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    TBC Group 2 - Adding Product
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.username(class="form-control", placeholder=form.username.label.text) }}
+        {{ form.password(class="form-control mt-3", placeholder=form.password.label.text) }}
+        {{ form.login(class="btn btn-warning mt-2") }}
+    </form>
+{% endblock %}
